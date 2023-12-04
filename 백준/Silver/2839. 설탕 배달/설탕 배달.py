@@ -1,15 +1,17 @@
+# 그리디 이용
 n = int(input())
-min = -1
-m = n // 5
+count = 0
 
-if (n % 5 == 0) :
-    min = m
+while True:
+    if n % 5 == 0:
+        count += n // 5
+        print(count)
+        break
 
-else : 
-    for i in range(m, -1, -1):
-        if (n - (5 * i)) % 3 == 0:
-            j = (n - (5 * i)) // 3
-            min = i + j
-            break
+    else:
+        n = n - 3
+        count += 1
 
-print(min)
+    if n < 0:
+        print(-1)
+        break
