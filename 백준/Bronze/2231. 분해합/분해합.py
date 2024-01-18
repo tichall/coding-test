@@ -3,14 +3,13 @@
 
 n = int(input())
 tmp = False
-for i in range(1, n) :
+for i in range(1, n+1) :
     num = i
-    test = str(i)
+    test = str(num)
     for j in range(len(test)) :
         num += int(test[j])
     if n == num :
         print(i)
-        tmp = True
         break
-if tmp == False :
-    print(0)
+    if i == n :
+        print(0)
