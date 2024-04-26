@@ -1,6 +1,6 @@
 class Solution {
     public double solution(int[] numbers) {
-        float sum = 0;
+        double sum = 0;
         for (int num : numbers) {
             sum += num;
         }
