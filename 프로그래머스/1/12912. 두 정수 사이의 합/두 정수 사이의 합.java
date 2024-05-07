@@ -1,20 +1,15 @@
 class Solution {
     public long solution(int a, int b) {
         long answer = 0;
-        int max = 0;
-        int min = 0;
-        if (a < b) {
-            max = b;
-            min = a;
-        } else if (a > b){
-            max = a;
-            min = b;
-        } else {
-            return a;
-        }
         
-        for (int i = min; i <= max; i++) {
-            answer += i;
+        if (a < b) {
+            for (int i = a; i <= b; i++) {
+                answer += i;
+            }
+        } else {
+            for (int i = b; i <= a; i++) {
+                answer += i;
+            }
         }
         
         return answer;
