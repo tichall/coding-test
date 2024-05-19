@@ -6,10 +6,6 @@ class Solution {
             answer -= price * i;
         }
         
-        if (answer >= 0) {
-            answer = 0;
-        } 
-
-        return -answer;
+        return answer > 0 ? 0 : -answer;
     }
 }
