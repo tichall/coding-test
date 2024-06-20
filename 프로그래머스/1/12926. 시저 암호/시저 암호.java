@@ -6,13 +6,14 @@ class Solution {
         String answer = "";
         
         for (int i = 0; i < length; i++) {
-            if(arr[i] == ' ') {
-                answer += ' ';
-            } else if(Character.isUpperCase(arr[i])) {
+            if(Character.isUpperCase(arr[i])) {
                 answer += (char)((arr[i] + n - 65) % 26 + 65);
+                continue;
             } else if (Character.isLowerCase(arr[i])) {
                 answer += (char)((arr[i] + n - 97) % 26 + 97);
+                continue;
             }
+            answer += arr[i];
         }
         return answer;
     }
